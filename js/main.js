@@ -1,31 +1,31 @@
 $(document).ready(function(){  
     $("#toggleThemeBtn").click(function(){
         const bgColor = window.getComputedStyle(document.body, null).getPropertyValue('background-color'); 
-            if(bgColor === "rgb(255, 255, 255)" || bgColor === "rgba(0, 0, 0, 0)"){
-                $('body').css({
-                    "backgroundColor": "rgb(0, 0, 0)",
-                    "color": "rgb(255, 255, 255)"
-                });
-                $('.btn').css({
-                        "backgroundColor": "rgb(255, 255, 255)",
-                        "color": "rgb(0, 0, 0)"   
-                });
-                $('nav a').css({
-                    "color": "rgb(255,255,255)"
-                });
-                $(this).html('&#9728').css({
-                    "backgroundColor": "rgb(0, 0, 0)",
-                    "color": "rgb(255, 255, 255)"
-                });
-                $('.menu-btn').css({
-                    "backgroundColor": "rgb(0, 0, 0)"
-                });
-                $('.bar').css({
-                    "backgroundColor": "rgb(255, 255, 255)"
-                })
-                if(Math.floor($(window).scrollTop()) > 60){
-                    $('.navbar-container').removeClass("lightBg").addClass("darkBg");
-                }  
+        if(bgColor === "rgb(255, 255, 255)" || bgColor === "rgba(0, 0, 0, 0)"){
+            $('body').css({
+                "backgroundColor": "rgb(0, 0, 0)",
+                "color": "rgb(255, 255, 255)"
+            });
+            $('.btn').css({
+                "backgroundColor": "rgb(255, 255, 255)",
+                "color": "rgb(0, 0, 0)"   
+            });
+            $('nav a, .sidenav a').css({
+                "color": "rgb(255,255,255)"
+            });
+            $(this).html('&#9728').css({
+                "backgroundColor": "rgb(0, 0, 0)",
+                "color": "rgb(255, 255, 255)"
+            });
+            $('.menu-btn, .sidenav').css({
+                "backgroundColor": "rgb(0, 0, 0)"
+            });
+            $('.bar').css({
+                "backgroundColor": "rgb(255, 255, 255)"
+            });
+            if(Math.floor($(window).scrollTop()) > 60){
+                $('.navbar-container').removeClass("lightBg").addClass("darkBg");
+            }; 
         }else{
             $('body').css({
                 "backgroundColor": "rgb(255, 255, 255)",
@@ -35,16 +35,16 @@ $(document).ready(function(){
                 "backgroundColor": "rgb(0, 0, 0)",
                 "color": "rgb(255, 255, 255)"   
             });
-            $('nav a').css({
-                "color": "rgb(0,0,0)"
-            });
             $(this).html('&#9790').css({
                 "backgroundColor": "rgb(255, 255, 255)",
                 "color": "rgb(0, 0, 0)"
             });
-            $('.menu-btn').css({
+            $('.menu-btn, .sidenav').css({
                 "backgroundColor": "rgb(255, 255, 255)"
             });
+            $("nav a, .sidenav a").css({
+                'color': "rgb(0, 0, 0)"
+            })
             $('.bar').css({
                 "backgroundColor": "rgb(0, 0, 0)"
             })
@@ -75,7 +75,6 @@ $(document).ready(function(){
                 $(".navbar-container").addClass("darkBg");
             }
         };
-
         // Fade in effect
         // $("section").each(function(i){
         //     const bottom_of_item = $(this).position().top() + $(this).outerHeight();
