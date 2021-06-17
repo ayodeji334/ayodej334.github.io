@@ -10,7 +10,7 @@ $(document).ready(function(){
                 "backgroundColor": "rgb(255, 255, 255)",
                 "color": "rgb(0, 0, 0)"   
             });
-            $('nav a, .sidenav a').css({
+            $('nav a, .sidenav a, .contact-detail a span').css({
                 "color": "rgb(255,255,255)"
             });
             $(this).html('&#9728').css({
