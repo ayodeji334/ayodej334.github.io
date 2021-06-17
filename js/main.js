@@ -23,6 +23,9 @@ $(document).ready(function(){
             $('.bar').css({
                 "backgroundColor": "rgb(255, 255, 255)"
             });
+            $('.contact-detail svg').css({
+                "fill": "rgb(255, 255, 255)"
+            })
             if(Math.floor($(window).scrollTop()) > 60){
                 $('.navbar-container').removeClass("lightBg").addClass("darkBg");
             }; 
@@ -31,6 +34,9 @@ $(document).ready(function(){
                 "backgroundColor": "rgb(255, 255, 255)",
                 "color": "rgb(0, 0, 0)"
             });
+            $('.contact-detail svg').css({
+                "fill": "rgb(0, 0, 0)"
+            })
             $('.btn').css({
                 "backgroundColor": "rgb(0, 0, 0)",
                 "color": "rgb(255, 255, 255)"   

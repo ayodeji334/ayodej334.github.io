@@ -1,4 +1,4 @@
-html,body{
+html, body{
     font-family: 'Poppins','Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     overflow-x: hidden;
     scroll-behavior: smooth;
@@ -141,8 +141,8 @@ ul li{
     min-height: 40px;
 }
 .contact-detail svg{
-    width: 25px;
-    height: 25px;
+    width: 20px;
+    height: 20px;
 }
 .sidenav{
     border-top: 1px solid #d3d3d3;
@@ -252,7 +252,7 @@ section#about h1, section#skills h1, section#portfolio h1, section#contact h1{
     display: flex;
     flex: 0 1 auto;
     flex-wrap: wrap;
-    padding: 2.4rem 1rem;
+    padding: 2.4rem .5rem;
     align-items: center;
 }
 .project{
@@ -307,12 +307,9 @@ section#about h1, section#skills h1, section#portfolio h1, section#contact h1{
     flex-direction: row;
     margin: .943rem 0;
 }
-.role h5{
-    margin: 0;
-    color: #444444;
-}
-.role h3, .role h4, .role h5{
+.role h4, .role h5{
     padding: .4rem 0;
+    font-weight: 500;
 }
 .role img {
     width: 100%;
@@ -394,8 +391,8 @@ button, button:focus{
     text-align: left !important;
 }
 label{
-    font-weight: 600;
-    display: none;
+    font-weight:600;
+    /* display: none; */
 }
 input[type=text],input[type=email],select, textarea{
     border-radius: 6px;
