@@ -50,4 +50,7 @@
     .nav-main{
         display: block;
     }
+    .menu-btn{
+        display: none;
+    }
 }

@@ -114,35 +114,63 @@ h1,h2,h3,h4,h5{
 .about-detail,.role-container{
     width: 100%;
 }
-/* .roles-content{
+ul{
+    list-style: none;
     padding: 0;
-    display: flex;
-    flex:  0 1;
-    flex-direction: column;
-    flex-wrap: wrap;
-} */
-/* .role{
-    border-radius: 15px;
-    width: 100%;
-    margin: 1rem;
-    padding: 10px 0;
-    min-width: 120px;
-    box-shadow: 1px 1px 1px 1px black;
-} */
+}
+ul li{
+    display: block;
+}
 .about-container,.skill-container, .contact-container{
     display: flex;
     flex-direction: column;
     /* flex-wrap: wrap; */
     flex: 0 1 auto;
 }
-button#toggleThemeBtn{
+.bar1_transform{
+    transform: translateY(10px) rotateZ(135deg);
+}
+.bar3_transform{
+    transform: translateY(-5px) rotateZ(-135deg);
+}
+.open_sidenav{
+    visibility: visible !important;
+}
+.sidenav{
+    border-top: 1px solid #d3d3d3;
+    width: 100%;
+    margin-top: 87px;
+    padding: .943rem 0;
+    background-color: #fff;
+    position: fixed;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    visibility: hidden;
+}
+.sidenav a {
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+    color: black;
+    padding: .56rem;
+    margin: .5rem 0;
+    text-decoration: none;
+    font-size: 1.4rem;
+}
+.bar2_transform{
+    transform: scale(0);
+}
+button#toggleThemeBtn, .menu-btn{
     font-size: 1.3rem;
     font-weight: 900;
     border: none;
-    padding: 10;
+    padding: 10px;
     background-color: #fff;
     border-radius: 10px;
     cursor: pointer;
+    position: relative;
 }
 .darkBg{
     background-color: #000000;
@@ -303,8 +331,29 @@ section#about h1, section#skills h1, section#portfolio h1, section#contact h1{
 p{
     font-size: 1rem;
 }
+.group-btn{
+    display: flex;
+    flex-direction: row;
+    width: 100px;
+    padding: .5rem;
+    justify-content: space-between;
+    align-items: center;
+}
 .contact-detail,.contact-form{
     width: 100%;
+}
+button, button:focus{
+    border: none;
+}
+.menu-btn .bar {
+  background: #000000;
+  content: "";
+  display: block;
+  height: 3px;
+  border-radius: 2px;
+  margin: 4px 0;
+  transition: 0.5s;
+  width: 20px;
 }
 /* .contact-form,.skills-container{
     padding: 0 2rem;
