@@ -25,7 +25,7 @@ $(document).ready(function(){
             });
             $('.contact-detail svg').css({
                 "fill": "rgb(255, 255, 255)"
-            })
+            });
             if(Math.floor($(window).scrollTop()) > 60){
                 $('.navbar-container').removeClass("lightBg").addClass("darkBg");
             }; 
@@ -48,7 +48,7 @@ $(document).ready(function(){
             $('.menu-btn, .sidenav').css({
                 "backgroundColor": "rgb(255, 255, 255)"
             });
-            $("nav a, .sidenav a").css({
+            $("nav a, .sidenav a,.contact-detail a span").css({
                 'color': "rgb(0, 0, 0)"
             })
             $('.bar').css({
@@ -82,17 +82,18 @@ $(document).ready(function(){
             }
         };
         // Fade in effect
-        // $("section").each(function(i){
-        //     const bottom_of_item = $(this).position().top() + $(this).outerHeight();
-        //     const bottom_of_window = $(window).scrollTop() + $(window).height();
-
-        //     if(bottom_of_window > bottom_of_item){
-        //         $(this).animate({
-        //             "opacity": "1"
-        //         }, 1000);
-        //     };
-        // });
+        $("section").each(function(){
+            const itemBottom = $(this).offset().top + $(this).outerHeight();
+            const windowBottom = $(window).scrollTop() + $(window).innerHeight();
+            
+            if(itemBottom < windowBottom){
+                if($(this).css("opacity") === 0){
+                    console.log("working")
+                }else{
+                    console.log("Not working");
+                }
+            }
+        });
     });
 });
-
   

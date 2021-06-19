@@ -191,6 +191,9 @@ button#toggleThemeBtn, .menu-btn{
     background-color: #ffffff;
     border-bottom: 1px solid #d3d3d3;
 }
+footer{
+    border-top: 1px solid #d3d3d3;
+}
 .skills-detail{
     width: 100%;
 }
@@ -206,9 +209,17 @@ button#toggleThemeBtn, .menu-btn{
     border-radius: 9999px;
     background-color: rgb(223, 247, 248);
 }
+section h3{
+    margin-bottom: 10px;
+    font-weight: 800;
+}
 section{
     width: 100%;
-    padding: 4.5rem 0;
+    padding: 4.2rem 0;
+    opacity: 1;
+}
+section > div.container {
+    padding: 2.3rem 0;
 }
 .container {
     width: 100%;
@@ -322,17 +333,16 @@ section#about h1, section#skills h1, section#portfolio h1, section#contact h1{
     padding: 3.1rem;
 }
 .contact-detail ul{
-    display: flex;
     list-style: none;
     padding: 0;
-    flex-wrap: wrap;
+    margin: 2rem 0;
 }
 .contact-detail li a{
-    margin: .5rem;
+    margin: .5rem 0;
     padding: .8rem;
-    align-items: center;
     display: flex;
-    justify-content: center;
+    width: fit-content;
+    justify-content: flex-start;
     align-items: center;
     text-decoration: none;
     border-radius: 15px;
@@ -390,7 +400,7 @@ button, button:focus{
 .project img{
     width: 100%;
     max-width: 600px;
-    border-radius: 20px;
+    border-radius: 2px;
 }
 .form-group{
     display: flex;

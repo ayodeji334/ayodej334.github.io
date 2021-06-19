@@ -74,10 +74,11 @@
     </div>
 
     <!-- About section -->
-    <section id="about">
+    <section class="fade" id="about">
         <div class="container"> 
             <div class="about-content">
-                <h1 style="text-align: left;">About Me</h1>
+                <h3 class="item-left">ABOUT ME</h3>
+                <h1 style="text-align: left;">Who I Am</h1>
                 <div class="about-container">
                     <div class="about-detail">
                         <p style="text-align: left;">
@@ -135,10 +136,11 @@
     </section>
 
     <!-- Skills section -->
-    <section id="skills">
+    <section class="fade" id="skills">
         <div class="container">
             <div class="skills-content">
-                <h1 style="text-align: left;">Stack/Tools</h1>
+                <h3 class="item-left">STACKS AND TOOLS</h3>
+                <h1 style="text-align: left;">The Tool I used</h1>
                 <div class="skill-container">
                     <div class="skills-detail">
                         <p>
@@ -364,13 +366,14 @@
     </section>
 
     <!-- Portfolio Section -->
-    <section id="portfolio">
+    <section class="fade" id="portfolio">
         <div class="container">
             <div class="portfolio-content">
+                <h3 style="text-align: center;">MY PORTFOLIO</h3>
                 <h1>Featured Projects</h1>
-                <p>
-                    These are some of my works. You can check them by yourself, as most of the project have been
-                    live. I've worked with different stacks and design base on scope of the project and customer requirement.
+                <p style="max-width: 800px;margin: auto;text-align: center;">
+                    These are some of my works. You can check them yourself, as most of the project have been
+                    live. I've worked with different stacks and design base on scope of the project and requirement.
                 </p>
                 <div class="projects-container">
                     <div class="project">
@@ -383,7 +386,7 @@
                                 porro qui perspiciatis magni eveniet beatae impedit 
                                 consectetur reiciendis, tempora quo ratione.
                             </p>
-                            <div style="display: flex; flex-direction: row;">
+                            <div style="display: flex; flex-direction: row;margin: 2rem 0;">
                                 <a class="btn" id="link-btn" href="#" target="_blank" rel="noopener noreferrer">Live Demo</a>
                                 <a class="btn" id="link-btn" style="margin-left: .5rem;" href="#" target="_blank" rel="noopener noreferrer">Github</a>
                             </div>
@@ -405,7 +408,7 @@
                                 porro qui perspiciatis magni eveniet beatae impedit 
                                 consectetur reiciendis, tempora quo ratione.
                             </p>
-                            <div style="display: flex; flex-direction: row;">
+                            <div style="display: flex; flex-direction: row;margin: 2rem 0;">
                                 <a class="btn" id="link-btn" href="#" target="_blank" rel="noopener noreferrer">Live Demo</a>
                                 <a class="btn" id="link-btn" style="margin-left: .5rem;" href="#" target="_blank" rel="noopener noreferrer">Github</a>
                             </div>
@@ -421,7 +424,7 @@
                                 porro qui perspiciatis magni eveniet beatae impedit 
                                 consectetur reiciendis, tempora quo ratione.
                             </p>
-                            <div style="display: flex; flex-direction: row;">
+                            <div style="display: flex; flex-direction: row;margin: 2rem 0;">
                                 <a class="btn" id="link-btn" href="#" target="_blank" rel="noopener noreferrer">Live Demo</a>
                                 <a class="btn" id="link-btn" style="margin-left: .5rem;" href="#" target="_blank" rel="noopener noreferrer">Github</a>
                             </div>
@@ -443,7 +446,7 @@
                                 porro qui perspiciatis magni eveniet beatae impedit 
                                 consectetur reiciendis, tempora quo ratione.
                             </p>
-                            <div style="display: flex; flex-direction: row;">
+                            <div style="display: flex; flex-direction: row;margin: 2rem 0;">
                                 <a class="btn" id="link-btn" href="#" target="_blank" rel="noopener noreferrer">Live Demo</a>
                                 <a class="btn" id="link-btn" style="margin-left: .5rem;" href="#" target="_blank" rel="noopener noreferrer">Github</a>
                             </div>
@@ -455,13 +458,13 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact">
+    <section class="fade" id="contact">
         <div class="container">
             <div class="contact-content">
                 <div class="contact-container">
                     <div class="contact-detail">
-                        <h1 class="m-0 item-left">Do you have a Project?</h1>
-                        <!-- <h2 class="m-0 item-left">Let's Work Together</h2> -->
+                        <h3 class="item-left">CONNECT WITH ME</h3>
+                        <h1 class="item-left">Do you have a project? Let's Work Together</h1>
                         <p style="text-align: left;">
                             Lorem ipsum dolor sit, amet consectetur 
                             adipisicing elit. Unde asperiores voluptatum 
@@ -472,15 +475,8 @@
                             adipisicing elit. Vero obcaecati, illum 
                             quae perspiciatis, at recusandae alias 
                             iusto sed nostrum quibusdam sunt et. Illum, non? 
-                            Ipsa perferendis cupiditate molestias tempore sit.
-                            <br>
-                            <br>
-                            Lorem ipsum dolor, sit amet consectetur 
-                            adipisicing elit. Rerum, dolorum temporibus 
-                            asperiores modi adipisci eius eligendi 
-                            voluptatibus fugit, provident sequi ex 
-                            tempore itaque repudiandae aliquid vero? 
-                            Quos quasi delectus blanditiis!
+                            Ipsa perferendis cupiditate molestias tempore sit. <br />
+                            <b>Click any of the link below or fill the form and let's talk.</b>
                         </p>
                         <div>
                             <ul>
@@ -627,7 +623,7 @@
                         </div>
                     </div>
                     <div class="contact-form">
-                        <h2 class="m-0 item-left">Send me a message</h2>
+                        <h2 class="item-left">Send me a message</h2>
                         <form action="">
                             <div class="form-group">
                                 <label for="name">Name</label>
@@ -641,19 +637,20 @@
                                 <label for="name">Scope of the Project</label>
                                 <select name="" id="" required>
                                     <option value="">Select the project scope</option>
-                                    <option value="Frontend">Frontend</option>
-                                    <option value="Backend">Backend</option>
-                                    <option value="Both">Fullstack (Front-end and Banckend)</option>
+                                    <option value="web-application">FullStack Web Application</option>
+                                    <option value="landing page">Landing Page</option>
+                                    <option value="psd-to-html">PSD to HTML</option>
+                                    <option value="wordpress">Wordpress Website</option>
                                 </select>
                             </div>
                             <div class="form-group">
                                 <label for="duratio">Project Duration</label>
                                 <select name="" id="" required>
                                     <option value="">Select the project duration</option>
-                                    <option value="1weeks">1weeks</option>
-                                    <option value="3weeks">3weeks</option>
-                                    <option value="4weeks">A month</option>
-                                    <option value="$weeks+">More than a month</option>
+                                    <option value="1 week">1 weeks</option>
+                                    <option value="3 weeks">3 weeks</option>
+                                    <option value="4 weeks">A month</option>
+                                    <option value="4 weeks+">More than a month</option>
                                 </select>
                             </div>
                             <div class="form-group">
@@ -672,8 +669,8 @@
         </div>
     </section>
     <footer>
-        <div style="text-align: center;padding: 1.9rem 1rem;">
-            <p style="font-weight: 500;text-align: center;padding: 0 2rem;">Copyright @ 2021 Odunayo Ayodeji Fawumi. All Right Reserved</p>
+        <div style="text-align: center;padding: 1.3rem 1rem;">
+            <p style="font-weight: 600;text-align: center;padding: 0 2rem;">Copyright @ 2021 Odunayo Ayodeji Fawumi. All Right Reserved</p>
         </div>
     </footer>
     <script src="./js/main.js"></script>
