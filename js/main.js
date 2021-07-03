@@ -1,34 +1,53 @@
-$(document).ready(function(){  
+$(document).ready(function(){
+    //set bg color and scroll height on page load 
+    let bgColor = window.getComputedStyle(document.body, null).getPropertyValue('background-color');
+    let scrollHeight = Math.floor($(window).scrollTop());
+
+    //Scrolling event
+    $(window).scroll(function(){
+        scrollEffect();
+        fadeInEffect();
+    });
+
+    //Toggle Theme Btn
     $("#toggleThemeBtn").click(function(){
-        const bgColor = window.getComputedStyle(document.body, null).getPropertyValue('background-color'); 
+        bgColor = window.getComputedStyle(document.body, null).getPropertyValue('background-color'); 
         if(bgColor === "rgb(255, 255, 255)" || bgColor === "rgba(0, 0, 0, 0)"){
             $('body').css({
                 "backgroundColor": "rgb(0, 0, 0)",
                 "color": "rgb(255, 255, 255)"
             });
+            
             $('.btn').css({
                 "backgroundColor": "rgb(255, 255, 255)",
                 "color": "rgb(0, 0, 0)"   
             });
+
             $('nav a, .sidenav a, .contact-detail a span').css({
                 "color": "rgb(255,255,255)"
             });
+
             $(this).html('&#9728').css({
                 "backgroundColor": "rgb(0, 0, 0)",
                 "color": "rgb(255, 255, 255)"
             });
+
             $('.menu-btn, .sidenav').css({
                 "backgroundColor": "rgb(0, 0, 0)"
             });
+
             $('.bar').css({
                 "backgroundColor": "rgb(255, 255, 255)"
             });
+
             $('.contact-detail svg').css({
                 "fill": "rgb(255, 255, 255)"
             });
+             
             if(Math.floor($(window).scrollTop()) > 60){
                 $('.navbar-container').removeClass("lightBg").addClass("darkBg");
             }; 
+
         }else{
             $('body').css({
                 "backgroundColor": "rgb(255, 255, 255)",
@@ -59,15 +78,31 @@ $(document).ready(function(){
             }
         }
     });
+
+    //Toggle Menu Btn
     $(".menu-btn").click(function(){
         $(".bar1").toggleClass("bar1_transform");
         $(".bar3").toggleClass("bar3_transform");
         $(".bar2").toggleClass("bar2_transform");
         $(".sidenav").toggleClass("open_sidenav");
     });
-    $(window).scroll(function(){
-        const bgColor = window.getComputedStyle(document.body, null).getPropertyValue('background-color');
-        const scrollHeight = Math.floor($(window).scrollTop());
+
+    //Fade in function
+    function fadeInEffect() {
+        $("section").each(function(){
+            const currentElmentBottom = $(this).offset().top;
+            const windowBottom = $(window).scrollTop() + $(window).height();
+            
+            if(windowBottom > currentElmentBottom){
+                $(this).animate({ "opacity": 1})
+            }
+        });
+    };
+
+    //Scroll Effect
+    function scrollEffect(){
+        bgColor = window.getComputedStyle(document.body, null).getPropertyValue('background-color');
+        scrollHeight = Math.floor($(window).scrollTop());
         if(scrollHeight === 0 || scrollHeight < 60){
             if(bgColor === "rgb(255, 255, 255)" || bgColor === "rgba(0, 0, 0, 0)"){
                 $(".navbar-container").removeClass("lightBg");
@@ -81,19 +116,40 @@ $(document).ready(function(){
                 $(".navbar-container").addClass("darkBg");
             }
         };
-        // Fade in effect
-        $("section").each(function(){
-            const itemBottom = $(this).offset().top + $(this).outerHeight();
-            const windowBottom = $(window).scrollTop() + $(window).innerHeight();
-            
-            if(itemBottom < windowBottom){
-                if($(this).css("opacity") === 0){
-                    console.log("working")
-                }else{
-                    console.log("Not working");
-                }
-            }
-        });
-    });
+
+    };
+
+    function mouseEnterEffect(){
+        if(bgColor === "rgb(255, 255, 255)" || bgColor === "rgba(0, 0, 0, 0)"){
+            $(this).css({
+                "backgroundColor": "rgb(7, 7, 7) !important",
+                "color": "rgb(255, 255, 255) !important"
+            });
+        }else{
+            $(this).css({
+                "backgroundColor": "rgb(255, 255, 255) !important",
+                "color": "rgb(7, 7, 7) !important"
+            });
+        }
+    };
+
+    function mouseLeaveEffect(){
+        if(bgColor === "rgb(255, 255, 255)" || bgColor === "rgba(0, 0, 0, 0)"){
+            $(this).css({
+                "backgroundColor": "#ffffff !important",
+                "color": "rgb(7, 7, 7) !important"
+            })
+        }else{
+            $(this).css({
+                "backgroundColor": "rgb(7, 7, 7) !important",
+                "color": "#ffffff"
+            })
+        }
+    };
+
+    scrollEffect();
+    fadeInEffect();
+    mouseLeaveEffect();
+    mouseEnterEffect();
 });
   
