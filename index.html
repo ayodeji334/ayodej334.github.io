@@ -12,6 +12,7 @@
     <link rel="icon" href="./assets/img/odunayo-fawumi.jpg" type="image/x-icon" />
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     <script src="./js/jquery.min.js"></script>
+    <script src="./js/jquery.validate.min.js"></script>
 </head>
 <body>
     <!-- Navbar section -->
@@ -19,25 +20,25 @@
         <nav class="navbar-container">
             <div class="container">
                 <div class="navbar-content">
-                    <div href="javascript:void(0)">
+                    <div>
                         <img width="60" height="60" src="./assets/img/logo.svg" alt="logo" />
                     </div>
                     <div class="nav-main">
                         <ul>
                             <li>
-                                <a href="#">Home</a>
+                                <a class="nav-link" href="#">Home</a>
                             </li>
                             <li>
-                                <a href="#about">About</a>
+                                <a class="nav-link" href="#about">About</a>
                             </li>
                             <li>
-                                <a href="#skills">Stacks</a>
+                                <a class="nav-link" href="#skills">Stacks</a>
                             </li>
                             <li>
-                                <a href="#portfolio">Projects</a>
+                                <a class="nav-link" href="#portfolio">Projects</a>
                             </li>
                             <li>
-                                <a href="#contact">Contact</a>
+                                <a class="nav-link" href="#contact">Contact</a>
                             </li>
                         </ul>
                     </div>
@@ -105,7 +106,7 @@
                             Quos quasi delectus blanditiis!
                         </p>
                         <div style="padding: 30px 0;margin: 10px 0;">
-                            <a class="btn" href="#" download="./assets/img/logo.svg">Download My CV</a>
+                            <a class="btn" href="#" download="./assets/Resume-Odunayo-Ayodeji-Fawumi.pdf">Download My CV</a>
                         </div>
                     </div>
                     <div class="role-container">
@@ -484,7 +485,7 @@
                         <div>
                             <ul>
                                 <li>
-                                    <a class="flex-1" href="#" title="@twitter__link">
+                                    <a class="flex-1" href="https://www.twitter.com/OdunayoFawumi" title="@twitter__link">
                                         <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 39 32">
                                             <path
                                                 d="M39 3.788c-1.45 0.642-2.996 1.068-4.607 1.275 1.657-0.999 2.923-2.57 3.517-4.463-1.545 0.93-3.252 1.588-5.070 1.954-1.467-1.578-3.559-2.555-5.84-2.555-4.427 0-7.99 3.628-7.99 8.076 0 0.64 0.054 1.255 0.185 1.841-6.647-0.327-12.529-3.545-16.48-8.446-0.69 1.209-1.094 2.592-1.094 4.081 0 2.796 1.426 5.275 3.551 6.71-1.285-0.025-2.545-0.401-3.612-0.994 0 0.025 0 0.057 0 0.089 0 3.924 2.771 7.183 6.406 7.934-0.651 0.18-1.36 0.266-2.096 0.266-0.512 0-1.029-0.030-1.514-0.138 1.036 3.198 3.976 5.548 7.471 5.625-2.72 2.149-6.174 3.444-9.913 3.444-0.656 0-1.285-0.030-1.913-0.111 3.542 2.306 7.739 3.623 12.265 3.623 14.713 0 22.756-12.308 22.756-22.976 0-0.357-0.012-0.702-0.029-1.044 1.587-1.137 2.92-2.558 4.007-4.192z">
@@ -502,7 +503,7 @@
                                     </a>
                                 </li>
                                 <li>
-                                    <a class="flex-1" href="#" title="facebook__link">
+                                    <a class="flex-1" href="https://web.facebook.com/stixxdev/" title="facebook__link">
                                         <svg version="1.1" id="Capa_1" width="32" height="32" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                                             viewBox="0 0 29.94 29.94" style="enable-background:new 0 0 29.94 29.94;" xml:space="preserve">
                                         <g>
@@ -577,7 +578,7 @@
                                     </a>
                                 </li>
                                 <li>
-                                    <a class="flex-1" href="#" title="linkedin__link">
+                                    <a class="flex-1" href="https://www.linkedin.com/in/odunayo-ayodeji-fawumi-b2b47a209/" title="linkedin__link">
                                         <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" 
                                         xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                                             width="32px" height="32px" viewBox="0 0 32 32" style="enable-background:new 0 0 32 32;" xml:space="preserve">
@@ -627,38 +628,28 @@
                     </div>
                     <div class="contact-form">
                         <h2 class="item-left">Send me a message</h2>
-                        <form action="">
+                        <form id="contact-form">
                             <div class="form-group">
-                                <label for="name">Name</label>
-                                <input type="text" name="name" id="" placeholder="What's your name?">
+                                <label for="fullname">FullName</label>
+                                <input type="text" name="fullname" id="fullname" placeholder="What's your name?">
                             </div>
                             <div class="form-group">
-                                <label for="name">Email (Company or Personal) </label>
-                                <input required type="email" name="name" id="" placeholder="Your Email">
+                                <label for="email">Email (Company or Personal) </label>
+                                <input required type="email" name="email" id="email" placeholder="Your Email">
                             </div>
                             <div class="form-group">
-                                <label for="name">Scope of the Project</label>
-                                <select name="" id="" required>
-                                    <option value="">Select the project scope</option>
-                                    <option value="web-application">FullStack Web Application</option>
-                                    <option value="landing page">Landing Page</option>
-                                    <option value="psd-to-html">PSD to HTML</option>
-                                    <option value="wordpress">Wordpress Website</option>
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <label for="duratio">Project Duration</label>
-                                <select name="" id="" required>
-                                    <option value="">Select the project duration</option>
-                                    <option value="1 week">1 weeks</option>
-                                    <option value="3 weeks">3 weeks</option>
-                                    <option value="4 weeks">A month</option>
-                                    <option value="4 weeks+">More than a month</option>
+                                <label for="subject">Subject</label>
+                                <select name="subject" id="subject" required>
+                                    <option value="">Choose the right subject</option>
+                                    <option value="Work as front-end developer on a project">Work as Front-end Developer on a Project</option>
+                                    <option value="Work as Fullstack developer on a project">Work as Fullstack Developer on a Project</option>
                                 </select>
                             </div>
                             <div class="form-group">
                                 <label for="message">Message</label>
                                 <textarea
+                                    name="message"
+                                    id="message"
                                     rows="6"
                                     cols="9"
                                     placeholder="Tell me more about the project..."
@@ -678,6 +669,7 @@
             <p style="font-weight: 600;text-align: center;padding: 0 2rem;">Copyright @ 2021 Odunayo Ayodeji Fawumi. All Right Reserved</p>
         </div>
     </footer>
+
     <script src="./js/main.js"></script>
 </body>
 </html>

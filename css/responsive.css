@@ -8,6 +8,17 @@
         padding: 0;
         width: 100%;
     }
+    .modal-body {
+        background-color: #ffffff;
+        margin: 60px auto;
+        padding: 20px;
+        border-radius: 10px;
+        width: 30%;
+        font-size: 1.2rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
     .description p{
         text-align: left;
     }
@@ -52,5 +63,9 @@
     }
     .menu-btn{
         display: none;
+    }
+    .project-img{
+        padding: 1.36rem 6.5rem;
+        margin: 1.7rem 0;
     }
 }
