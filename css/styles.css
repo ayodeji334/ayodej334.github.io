@@ -5,6 +5,7 @@ html, body{
     font-size: 15px;
     margin: 0;
     padding: 0;
+    background-color: #ffffff;
     width: 100%;
 }
 .navbar-container{
@@ -137,9 +138,10 @@ ul li{
 .open_sidenav{
     visibility: visible !important;
 }
-.skill svg, .skill img {
+.skill img {
     max-width: 60px;
-    max-height: 80px;
+    width: 100%;
+    height: auto;
 }
 .contact-detail svg{
     width: 20px;
@@ -212,9 +214,8 @@ footer{
     background-color: rgb(223, 247, 248);
 }
 section h3{
-    margin-bottom: 10px;
-    font-weight: 700;
-    font-size: 1.2rem;
+    font-weight: 600;
+    font-size: 1.03rem;
 }
 section{
     width: 100%;
@@ -330,8 +331,11 @@ form .error {
     flex-direction: row;
     margin: .943rem 0;
 }
+.role h3{
+    font-weight: 800;
+}
 .role h4, .role h5{
-    padding: .4rem 0;
+    padding: .3rem 0;
     font-weight: 500;
 }
 .role img {
