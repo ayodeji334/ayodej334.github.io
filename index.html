@@ -11,10 +11,11 @@
     <link rel="stylesheet" href="./css/responsive.css" />
     <link rel="icon" href="./assets/img/odunayo-fawumi.jpg" type="image/x-icon" />
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <!-- <script src="./js/jquery.min.js"></script>
-    <script src="./js/jquery.validate.min.js"></script> -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" referrerpolicy="no-referrer"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.min.js" integrity="sha512-37T7leoNS06R80c8Ulq7cdCDU5MNQBwlYoy1TX/WUsLFC2eYNqtKlV0QjH7r8JpG/S0GUMZwebnVFLPd6SU5yg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/jquery.validate.min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.min.js" integrity="sha512-37T7leoNS06R80c8Ulq7cdCDU5MNQBwlYoy1TX/WUsLFC2eYNqtKlV0QjH7r8JpG/S0GUMZwebnVFLPd6SU5yg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
 </head>
 <body>
     <!-- Navbar section -->
@@ -45,7 +46,11 @@
                         </ul>
                     </div>
                     <div class="group-btn">
-                        <button id="toggleThemeBtn" type="button">&#9790</button>
+                        <button id="toggleThemeBtn" type="button">
+                            <span class="material-icons">
+                                &#xe51c;
+                            </span>
+                        </button>
                         <button type="button" class="menu-btn">
                             <span class="bar bar1"></span>
                             <span class="bar bar2"></span>
@@ -70,7 +75,12 @@
             <div class="description">
                 <h2 class="m-0">Hey!, I'm</h2>
                 <h1 class="m-0">Odunayo Ayodeji Fawumi</h1>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Obcaecati suscipit voluptas repellendus perspiciatis quidem maiores soluta a ad pariatur vitae, ipsam, blanditiis nesciunt incidunt veniam consectetur nostrum tenetur! Minima, quia!</p>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+                    Obcaecati suscipit voluptas repellendus perspiciatis quidem 
+                    maiores soluta a ad pariatur vitae, ipsam, blanditiis nesciunt 
+                    incidunt veniam consectetur nostrum tenetur! Minima, quia!
+                </p>
                 <a class="link btn" id="link-btn" href="#contact">Connect with me</a>
             </div>
             <div class="my-image-container">
@@ -80,7 +90,7 @@
     </div>
 
     <!-- About section -->
-    <section class="fade" id="about">
+    <section id="about">
         <div class="container">
             <div class="about-content">
                 <h3 class="item-left">ABOUT ME</h3>
@@ -108,16 +118,19 @@
                             Quos quasi delectus blanditiis!
                         </p>
                         <div style="padding: 30px 0;margin: 10px 0;">
-                            <a class="btn" href="#" download="./assets/Resume-Odunayo-Ayodeji-Fawumi.pdf">Download My CV</a>
+                            <a class="btn" href="./assets/Resume-Odunayo-Ayodeji-Fawumi.pdf" download="Resume-Odunayo-Ayodeji-Fawumi">Download My CV</a>
                         </div>
                     </div>
                     <div class="role-container">
                         <div class="roles-content">
                             <h2 style="text-align: left;">Experience</h2>
                             <div class="role">
-                                <div style="padding: .9rem 0;">
+                                <!-- <div style="padding: .9rem 0;">
                                     <img src="https://res.cloudinary.com/dpjpjlifw/image/upload/v1625703833/bowen_vcokir.png" alt="bowen-img" style="max-width: 55px;" />
-                                </div>
+                                </div> -->
+                                <span class="material-icons">
+                                    &#xe8f9;
+                                </span>
                                 <div style="padding: .9rem 1.2rem;">
                                     <h3>Front-end Developer (Intern)</h3>
                                     <h4>Bowen University, Iwo</h4>
@@ -125,13 +138,29 @@
                                 </div>
                             </div>
                             <div class="role">
-                                <div style="padding: .9rem 0;">
+                                <!-- <div style="padding: .9rem 0;">
                                     <img src="https://res.cloudinary.com/dpjpjlifw/image/upload/v1625703833/micakin_wste8f.png" alt="micakin-img" style="max-width: 50px;"  />
-                                </div>
+                                </div> -->
+                                <span class="material-icons">
+                                    &#xe8f9;
+                                </span>
                                 <div style="padding: .5rem 1.2rem;">
                                     <h3>Lead Front-end Developer</h3>
                                     <h4>Micakin Technologies Ltd</h4>
                                     <h5>Mar 2021 - Present</h5>
+                                </div>
+                            </div>
+                            <div class="role">
+                                <!-- <div style="padding: .9rem 0;">
+                                    <img src="https://res.cloudinary.com/dpjpjlifw/image/upload/v1625703833/micakin_wste8f.png" alt="micakin-img" style="max-width: 50px;"  />
+                                </div> -->
+                                <span class="material-icons">
+                                    &#xe80c;
+                                </span>
+                                <div style="padding: .5rem 1.2rem;">
+                                    <h3>Bachelor Degree in Computer Science</h3>
+                                    <h4>LAUTECH, Ogbomoso, Oyo State, Nigeria</h4>
+                                    <h5>Nov 2021 - Present</h5>
                                 </div>
                             </div>
                         </div>
@@ -142,7 +171,7 @@
     </section>
 
     <!-- Skills section -->
-    <section class="fade" id="skills">
+    <section id="skills">
         <div class="container">
             <div class="skills-content">
                 <h3 class="item-left">STACKS AND TOOLS</h3>
@@ -212,7 +241,7 @@
     </section>
 
     <!-- Portfolio Section -->
-    <section class="fade" id="portfolio">
+    <section id="portfolio">
         <div class="container">
             <div class="portfolio-content">
                 <h3 style="text-align: center;">MY PORTFOLIO</h3>
@@ -262,7 +291,7 @@
                     </div>
                     <div class="project">
                         <div class="project-detail">
-                            <h2>03. Peace Hospital Mangement System</h2>
+                            <h2>03. Nigeria COVID 19 Tracker Dashboard</h2>
                             <p>
                                 Lorem ipsum, dolor sit amet consectetur 
                                 adipisicing elit. Alias error eius corporis 
@@ -276,7 +305,10 @@
                             </div>
                         </div>
                         <div class="project-img">
-                            <img src="https://res.cloudinary.com/dpjpjlifw/image/upload/v1625703835/peace-hms_xh9csl.png" alt="my-image">
+                            <img 
+                                src="https://res.cloudinary.com/dpjpjlifw/image/upload/v1626173489/Screenshot_23_v1wd1a.png" 
+                                alt="my-image"
+                            />
                         </div>
                     </div>
                     <div class="project">
@@ -304,7 +336,7 @@
     </section>
 
     <!-- Contact Section -->
-    <section class="fade" id="contact">
+    <section id="contact">
         <div class="container">
             <div class="contact-content">
                 <div class="contact-container">

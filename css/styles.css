@@ -13,6 +13,9 @@ html, body{
     position: fixed;
     z-index: 1000;
 }
+.navbar-container .material-icons {
+    font-size: 1.28rem;
+}
 .navbar-content {
     display: flex;
     flex-direction: row;
@@ -130,10 +133,10 @@ ul li{
     flex: 0 1 auto;
 }
 .bar1_transform{
-    transform: translateY(10px) rotateZ(135deg);
+    transform: translateY(10px) rotateZ(130deg);
 }
 .bar3_transform{
-    transform: translateY(-5px) rotateZ(-135deg);
+    transform: translateY(-4px) rotateZ(-130deg);
 }
 .open_sidenav{
     visibility: visible !important;
@@ -148,18 +151,17 @@ ul li{
     height: 20px;
 }
 .sidenav{
-    border-top: 1px solid #d3d3d3;
-    border-bottom: 1px solid #d3d3d3;
     width: 100%;
     margin-top: 65px;
     padding: .943rem 0;
     background-color: #fff;
     position: fixed;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     display: flex;
     visibility: hidden;
+    height: 100%;
 }
 .sidenav a {
     width: 100%;
@@ -337,6 +339,10 @@ form .error {
 .role h4, .role h5{
     padding: .3rem 0;
     font-weight: 500;
+}
+.role .material-icons{
+    font-size: 1.8rem;
+    padding: .9rem .56rem;
 }
 .role img {
     width: 110%;

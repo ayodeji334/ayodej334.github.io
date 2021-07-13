@@ -11,7 +11,8 @@ $(document).ready(function(){
 
     //Toggle Theme Btn
     $("#toggleThemeBtn").click(function(){
-        bgColor = window.getComputedStyle(document.body, null).getPropertyValue('background-color'); 
+        // bgColor = window.getComputedStyle(document.body, null).getPropertyValue('background-color');
+        console.log(bgColor); 
         if(bgColor === "rgb(255, 255, 255)" || bgColor === "rgba(0, 0, 0, 0)"){
             $('body').css({
                 "backgroundColor": "rgb(0, 0, 0)",
@@ -27,7 +28,9 @@ $(document).ready(function(){
                 "color": "rgb(255,255,255)"
             });
 
-            $(this).html('&#9728').css({
+            $(".navbar-container span.material-icons").html("&#xe518;").css({ "color": "#ffffff"});
+            
+            $(this).css({
                 "backgroundColor": "rgb(0, 0, 0)",
                 "color": "rgb(255, 255, 255)"
             });
@@ -53,26 +56,35 @@ $(document).ready(function(){
                 "backgroundColor": "rgb(255, 255, 255)",
                 "color": "rgb(0, 0, 0)"
             });
+
             $('.contact-detail svg').css({
                 "fill": "rgb(0, 0, 0)"
-            })
+            });
+
             $('.btn').css({
                 "backgroundColor": "rgb(0, 0, 0)",
                 "color": "rgb(255, 255, 255)"   
             });
-            $(this).html('&#9790').css({
+
+            $(".navbar-container span.material-icons").html(`&#xe51c;`).css({ "color": "rgb(0, 0, 0)"});
+            
+            $(this).css({
                 "backgroundColor": "rgb(255, 255, 255)",
                 "color": "rgb(0, 0, 0)"
             });
+
             $('.menu-btn, .sidenav').css({
                 "backgroundColor": "rgb(255, 255, 255)"
             });
+
             $("nav a, .sidenav a,.contact-detail a span").css({
                 'color': "rgb(0, 0, 0)"
-            })
+            });
+
             $('.bar').css({
                 "backgroundColor": "rgb(0, 0, 0)"
-            })
+            });
+
             if(Math.floor($(window).scrollTop()) > 60){
                 $('.navbar-container').removeClass("darkBg").addClass("lightBg");    
             }
@@ -156,6 +168,14 @@ $(document).ready(function(){
             });
         }
     });
+
+    // $("a.nav-link").click(function(elm){
+    //     if(bgColor === "rgb(255, 255, 255)"){
+    //         $(elm.currentTarget).toggleClass("active-link__light-mode")
+    //     }else{
+    //         $(elm.currentTarget).toggleClass("active-link__light-mode")
+    //     }
+    // });
 
     //Create and Append Modal Element to Body
     function createModalContainer(status) {
