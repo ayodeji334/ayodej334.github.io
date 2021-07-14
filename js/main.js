@@ -2,6 +2,7 @@ $(document).ready(function(){
     //set bg color and scroll height on page load 
     let bgColor = window.getComputedStyle(document.body, null).getPropertyValue('background-color');
     let scrollHeight = Math.floor($(window).scrollTop());
+    let currentlocationHash = window.location.hash;
 
     //Scrolling event
     $(window).scroll(function(){
@@ -9,22 +10,20 @@ $(document).ready(function(){
         fadeInEffect();
     });
 
+    $(window).on('hashchange', setAnchorTagLinkClass);
+
     //Toggle Theme Btn
-    $("#toggleThemeBtn").click(function(){
-        // bgColor = window.getComputedStyle(document.body, null).getPropertyValue('background-color');
-        console.log(bgColor); 
+    $("#toggleThemeBtn").click(function(){ 
+       
         if(bgColor === "rgb(255, 255, 255)" || bgColor === "rgba(0, 0, 0, 0)"){
-            $('body').css({
-                "backgroundColor": "rgb(0, 0, 0)",
-                "color": "rgb(255, 255, 255)"
-            });
+            $('body').addClass("dark-mode");
             
             $('.btn').css({
                 "backgroundColor": "rgb(255, 255, 255)",
                 "color": "rgb(0, 0, 0)"   
             });
 
-            $('nav a, .sidenav a, .contact-detail a span').css({
+            $('.contact-detail a span').css({
                 "color": "rgb(255,255,255)"
             });
 
@@ -52,10 +51,7 @@ $(document).ready(function(){
             }; 
 
         }else{
-            $('body').css({
-                "backgroundColor": "rgb(255, 255, 255)",
-                "color": "rgb(0, 0, 0)"
-            });
+            $('body').removeClass("dark-mode")
 
             $('.contact-detail svg').css({
                 "fill": "rgb(0, 0, 0)"
@@ -77,7 +73,7 @@ $(document).ready(function(){
                 "backgroundColor": "rgb(255, 255, 255)"
             });
 
-            $("nav a, .sidenav a,.contact-detail a span").css({
+            $(".contact-detail a span").css({
                 'color': "rgb(0, 0, 0)"
             });
 
@@ -90,7 +86,7 @@ $(document).ready(function(){
             }
         }
 
-        handleMouseEventOverLink()
+        setAnchorTagLinkClass();
     });
 
     //Toggle Menu Btn
@@ -169,13 +165,18 @@ $(document).ready(function(){
         }
     });
 
-    // $("a.nav-link").click(function(elm){
-    //     if(bgColor === "rgb(255, 255, 255)"){
-    //         $(elm.currentTarget).toggleClass("active-link__light-mode")
-    //     }else{
-    //         $(elm.currentTarget).toggleClass("active-link__light-mode")
-    //     }
-    // });
+    function setAnchorTagLinkClass() { 
+        bgColor = window.getComputedStyle(document.body, null).getPropertyValue('background-color'); 
+        currentlocationHash = window.location.hash;
+        
+        $("a.nav-link").each(function(i, elm){
+            $(elm).removeClass('active');
+
+            if (this.hash === currentlocationHash) {
+                $(this).addClass('active');
+            }
+        });
+    };
 
     //Create and Append Modal Element to Body
     function createModalContainer(status) {
@@ -308,28 +309,6 @@ $(document).ready(function(){
         });
     };
 
-    //Mouse effect over navbar link tags
-    function handleMouseEventOverLink(){
-        $("a.nav-link").each(function(){
-            bgColor = window.getComputedStyle(document.body, null).getPropertyValue('background-color'); 
-            if(bgColor === "rgb(0, 0, 0)"){
-                $(this).css({"backgroundColor": "rgb(0, 0, 0)", "color": "rgb(255, 255, 255)"});
-                $(this).mouseover(function(){
-                    $(this).css({"backgroundColor": "rgb(255, 255, 255)", "color":"rgb(0, 0, 0)"})
-                }).mouseout(function(){
-                    $(this).css({"backgroundColor": "rgb(0, 0, 0)", "color": "rgb(255, 255, 255)"})
-                });
-            }else{
-                $(this).css({"backgroundColor": "rgb(255, 255, 255)", "color":"rgb(0, 0, 0)"});
-                $(this).mouseover(function(){
-                    $(this).css({"backgroundColor": "rgb(0, 0, 0)", "color": "rgb(255, 255, 255)"})
-                }).mouseout(function(){
-                    $(this).css({"backgroundColor": "rgb(255, 255, 255)", "color":"rgb(0, 0, 0)"})
-                }); 
-            }
-        });
-    }
-
     //Scroll Effect
     function toggleNavbarClassOnScroll(){
         bgColor = window.getComputedStyle(document.body, null).getPropertyValue('background-color');
@@ -353,4 +332,5 @@ $(document).ready(function(){
     //Call Functions on page load
     toggleNavbarClassOnScroll();
     fadeInEffect();
+    setAnchorTagLinkClass();
 });
