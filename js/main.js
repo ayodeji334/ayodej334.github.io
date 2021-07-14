@@ -13,8 +13,7 @@ $(document).ready(function(){
     $(window).on('hashchange', setAnchorTagLinkClass);
 
     //Toggle Theme Btn
-    $("#toggleThemeBtn").click(function(){ 
-       
+    $("#toggleThemeBtn").click(function(){    
         if(bgColor === "rgb(255, 255, 255)" || bgColor === "rgba(0, 0, 0, 0)"){
             $('body').addClass("dark-mode");
             
@@ -168,7 +167,7 @@ $(document).ready(function(){
     function setAnchorTagLinkClass() { 
         bgColor = window.getComputedStyle(document.body, null).getPropertyValue('background-color'); 
         currentlocationHash = window.location.hash;
-        
+
         $("a.nav-link").each(function(i, elm){
             $(elm).removeClass('active');
 
@@ -176,6 +175,8 @@ $(document).ready(function(){
                 $(this).addClass('active');
             }
         });
+
+       
     };
 
     //Create and Append Modal Element to Body
@@ -299,13 +300,12 @@ $(document).ready(function(){
 
     //Fade in function
     function fadeInEffect() {
-        $("section").each(function(){
-            const currentElmentBottom = $(this).offset().top + 4;
+        $(".slide").each(function(){
+            const currentElementBottom = $(this).offset().top + 4;
             const windowBottom = $(window).scrollTop() + $(window).height();
             
-            if(windowBottom > currentElmentBottom){
-                $(this).animate({ "opacity": 1})
-                //$(this).addClass("slide-up")
+            if(windowBottom > currentElementBottom){
+                $(this).animate({ "opacity": 1, "top": 0})
             }
         });
     };
@@ -314,6 +314,7 @@ $(document).ready(function(){
     function toggleNavbarClassOnScroll(){
         bgColor = window.getComputedStyle(document.body, null).getPropertyValue('background-color');
         scrollHeight = Math.floor($(window).scrollTop());
+
         if(scrollHeight === 0 || scrollHeight < 60){
             if(bgColor === "rgb(255, 255, 255)" || bgColor === "rgba(0, 0, 0, 0)"){
                 $(".navbar-container").removeClass("lightBg");
