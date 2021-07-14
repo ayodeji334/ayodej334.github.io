@@ -94,7 +94,7 @@ $(document).ready(function(){
         $(".bar1").toggleClass("bar1_transform");
         $(".bar3").toggleClass("bar3_transform");
         $(".bar2").toggleClass("bar2_transform");
-        $(".sidenav").toggleClass("open_sidenav");
+        $(".sidenav").slideToggle(400);
     });
     
     // Contact form handler
@@ -305,6 +305,7 @@ $(document).ready(function(){
             
             if(windowBottom > currentElmentBottom){
                 $(this).animate({ "opacity": 1})
+                //$(this).addClass("slide-up")
             }
         });
     };

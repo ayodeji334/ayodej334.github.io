@@ -148,9 +148,6 @@ ul li{
 .bar3_transform{
     transform: translateY(-4px) rotateZ(-130deg);
 }
-.open_sidenav{
-    visibility: visible !important;
-}
 .skill img {
     max-width: 60px;
     width: 100%;
@@ -160,19 +157,24 @@ ul li{
     width: 20px;
     height: 20px;
 }
+.heart{
+    color: red;
+}
 .sidenav{
     width: 100%;
-    margin-top: 61px;
+    margin-top: 58px;
     padding: .943rem 0;
     background-color: #fff;
     position: fixed;
-    flex-direction: column;
+    display: none;
+    height: 100%;
+}
+.sidenav-content {
+    display: flex;
     justify-content: flex-start;
     align-items: center;
-    display: flex;
-    visibility: hidden;
+    flex-direction: column; 
     height: 100%;
-    transition: .2s linear;
 }
 .sidenav a {
     text-align: center;
