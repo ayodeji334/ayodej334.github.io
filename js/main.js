@@ -8,9 +8,8 @@ $(document).ready(function(){
     $(window).scroll(function(){
         toggleNavbarClassOnScroll();
         fadeInEffect();
+        setLocationHash();
     });
-
-    $(window).on('hashchange', setAnchorTagLinkClass);
 
     //Toggle Theme Btn
     $("#toggleThemeBtn").click(function(){    
@@ -29,12 +28,12 @@ $(document).ready(function(){
             $(".navbar-container span.material-icons").html("&#xe518;").css({ "color": "#ffffff"});
             
             $(this).css({
-                "backgroundColor": "rgb(0, 0, 0)",
+                "backgroundColor": "rgb(12, 11, 11)",
                 "color": "rgb(255, 255, 255)"
             });
 
             $('.menu-btn, .sidenav').css({
-                "backgroundColor": "rgb(0, 0, 0)"
+                "backgroundColor": "rgb(7, 7, 7)"
             });
 
             $('.bar').css({
@@ -175,11 +174,9 @@ $(document).ready(function(){
                 $(this).addClass('active');
             }
         });
-
-       
     };
 
-    //Create and Append Modal Element to Body
+    //Create Modal Element
     function createModalContainer(status) {
         let modalContaner = $("<div />").attr('class', "modal-container");
         bgColor = window.getComputedStyle(document.body, null).getPropertyValue('background-color');
@@ -298,14 +295,14 @@ $(document).ready(function(){
         })
     }
 
-    //Fade in function
+    //Fade in
     function fadeInEffect() {
         $(".slide").each(function(){
             const currentElementBottom = $(this).offset().top + 4;
             const windowBottom = $(window).scrollTop() + $(window).height();
             
             if(windowBottom > currentElementBottom){
-                $(this).animate({ "opacity": 1, "top": 0})
+                $(this).css({ "opacity": 1, "top": 0})
             }
         });
     };
@@ -330,6 +327,19 @@ $(document).ready(function(){
         };
 
     };
+
+    //set location hash
+    function setLocationHash(){
+        $("section").each(function(){
+            if($(this).offset().top < window.pageYOffset + 10 && $(this).offset().top + $(this).height() > window.pageYOffset + 10){
+                const url = "#" + $(this).attr("id");
+
+                history.pushState({}, "", url);
+            };
+
+            setAnchorTagLinkClass();
+        });
+    }
 
     //Call Functions on page load
     toggleNavbarClassOnScroll();
