@@ -275,11 +275,7 @@ section.portfolio-section-title{
     padding: 7rem 0;
 }
 .container > div {
-    padding: .5rem 1rem;
-}
-.container {
-    width: 100%;
-    /* padding: 0 1.3rem; */
+    padding: .5rem 1.5rem;
 }
 h3.section-tag{
     color: #ff3333;
