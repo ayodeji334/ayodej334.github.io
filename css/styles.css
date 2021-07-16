@@ -23,6 +23,12 @@ html, body{
 .navbar-container .material-icons {
     font-size: 1.28rem;
 }
+.project-links{
+  display: flex; 
+  flex-direction: row;
+  justify-content: center;
+  margin: 2rem 0
+}
 .navbar-content {
     display: flex;
     flex-direction: row;
