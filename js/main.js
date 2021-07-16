@@ -8,8 +8,9 @@ $(document).ready(function(){
     $(window).scroll(function(){
         toggleNavbarClassOnScroll();
         fadeInEffect();
-        setLocationHash();
     });
+
+    $(window).on('hashchange', setAnchorTagLinkClass);
 
     //Toggle Theme Btn
     $("#toggleThemeBtn").click(function(){    
@@ -165,12 +166,12 @@ $(document).ready(function(){
 
     function setAnchorTagLinkClass() { 
         bgColor = window.getComputedStyle(document.body, null).getPropertyValue('background-color'); 
-        currentlocationHash = window.location.hash;
+        currentlocationHash = window.location.href;
 
         $("a.nav-link").each(function(i, elm){
             $(elm).removeClass('active');
 
-            if (this.hash === currentlocationHash) {
+            if (this.href === currentlocationHash) {
                 $(this).addClass('active');
             }
         });
@@ -327,19 +328,6 @@ $(document).ready(function(){
         };
 
     };
-
-    //set location hash
-    function setLocationHash(){
-        $("section").each(function(){
-            if($(this).offset().top < window.pageYOffset + 10 && $(this).offset().top + $(this).height() > window.pageYOffset + 10){
-                const url = "#" + $(this).attr("id");
-
-                history.pushState({}, "", url);
-            };
-
-            setAnchorTagLinkClass();
-        });
-    }
 
     //Call Functions on page load
     toggleNavbarClassOnScroll();

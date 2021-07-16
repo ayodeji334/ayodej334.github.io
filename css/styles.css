@@ -95,12 +95,16 @@ h1,h2,h3,h4,h5{
     width: 100%;
     height: 30rem;
 }
-.description h1{
-    font-weight: 900;
+.description h2{
+    font-weight: 600;
 }
-.description p{
+.description h2 span.outline{
+    color: #ff3333;
+    font-weight: 700;
+}
+/* .description p{
     text-align: center;
-}
+} */
 .m-0{
     margin: 0;
     padding: 0;
@@ -253,12 +257,19 @@ section:not(:first-child){
 section > div.container {
     padding: 2.3rem 0;
 }
+section.portfolio-section-title{
+    padding: 7rem 0;
+}
 .container {
     width: 100%;
     /* padding: 0 1.3rem; */
 }
 .container > div {
     padding: .5rem 1.7rem;
+}
+h3.section-tag{
+    color: #ff3333;
+    font-weight: 800;
 }
 .full-btn{
     width: 100%;
@@ -316,12 +327,12 @@ form .error {
 .project-detail{
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    /* justify-content: center;
+    align-items: center; */
 }
-.project-detail p{
+/* .project-detail p{
     text-align: center;
-}
+} */
 ::-webkit-scrollbar{
     width: 10px;
 }
@@ -427,6 +438,9 @@ p{
 }
 .contact-detail,.contact-form{
     width: 100%;
+}
+.contact-form{
+    padding-top: 1.8rem;
 }
 button, button:focus{
     border: none;
