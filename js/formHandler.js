@@ -67,8 +67,8 @@ $(document).ready(function(){
         }
     });
 
-     //Create Modal Element
-     function createModalContainer(status) {
+    //Create Modal Element
+    function createModalContainer(status) {
         let modalContaner = $("<div />").attr('class', "modal-container");
         bgColor = window.getComputedStyle(document.body, null).getPropertyValue('background-color');
 
