@@ -9,7 +9,7 @@ html, body{
     width: 100%;
 }
 .dark-mode{
-    background-color: rgb(7, 7, 7);
+    background-color: rgb(14, 14, 14);
     color: rgb(255, 255, 255);
 }
 .dark-mode a.nav-link {
@@ -281,13 +281,8 @@ h3.section-tag{
     color: #ff3333;
     font-weight: 800;
 }
-h3.section-tag{
-    color: #ff3333;
-    font-weight: 800;
-    text-align: center;
-}
 h2.section-title, .description p{
-    text-align: center;
+    /* text-align: center; */
     width: 100%;
 }
 .full-btn{
@@ -327,14 +322,14 @@ section:not(:first-child){
 .full-btn{
     width: 100%;
 }
-.btn{
+.btn, a.btn{
     background-color: black;
     font-weight: 600;
-    padding: 1.2rem;
+    padding: 1rem 1.2rem;
     font-size: .81rem;
     color: white;
     text-align: center;
-    text-transform: uppercase;
+    text-transform: capitalize !important;
     cursor: pointer;
     font-family: "Poppins", sans-serif;
     text-decoration: none;
@@ -361,7 +356,7 @@ section#about h1, section#skills h1, section#portfolio h1, section#contact h1{
     display: flex;
     flex: 0 1 auto;
     flex-wrap: wrap;
-    padding: .8rem .5rem;
+    padding: .8rem 1.5rem;
     align-items: center;
 }
 form .error {
@@ -408,12 +403,13 @@ form .error {
     background-color: #ffffff;
     font-weight: bold;
     font-size: .87rem;
-    padding: .98rem;
-    margin: .98rem;
+    padding: .9rem;
+    margin: .6rem;
     text-align: center;
     border-radius: 20px;
     min-height: 40px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     /* box-shadow: 0px 0px 1px 2px rgb(235, 232, 232); */
