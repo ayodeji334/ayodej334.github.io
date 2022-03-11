@@ -97,12 +97,53 @@ h1,h2,h3,h4,h5{
     background-color: rgb(7, 7, 7);
     color: #ffffff;
 } */
+span.title, span.subtitle {
+    font-size: 1rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-weight: 500;
+    display: block;
+    margin-bottom: 20px;
+}
+.social-share {
+    display: flex;
+    margin: -10px -12px;
+    flex-wrap: wrap;
+}
+.social-share li {
+    margin: 10px 12px;
+}
+.social-share li a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    line-height: 45px;
+    text-align: center;
+    font-size: 14px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    border-radius: 6px;
+    position: relative;
+    background-color: #000000;
+    color: #ffffff;
+    border-radius: 888px;
+}
+.social-share li a svg {
+    stroke-width: 2;
+    position: relative;
+    z-index: 2;
+    width: 20px;
+}
 .banner-container{
     width: 100%;
     height: 30rem;
 }
 .description h2{
     font-weight: 600;
+    font-size: 3.2rem;
+    margin-bottom: 1rem;
 }
 .description h2 span.outline{
     color: #ff3333;
@@ -122,6 +163,7 @@ h1,h2,h3,h4,h5{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin: 2rem 0;
 }
 .banner-content{
     padding: 3.6rem 1.4rem !important;
@@ -129,7 +171,9 @@ h1,h2,h3,h4,h5{
     justify-content: center;
     align-items: center;
     flex-direction: column-reverse;
-    flex: 0 1 auto;
+}
+.banner-content > div{
+    flex: 1 1 0%;
 }
 .my-image-container{
     width: 100%;
@@ -231,9 +275,7 @@ button:focus{
 footer{
     border-top: 1px solid #d3d3d3;
 }
-.skills-detail{
-    width: 100%;
-}
+
 .illustration{
     background-position: center;
     background-size: 80% 90%;
@@ -283,13 +325,24 @@ section.portfolio-section-title{
 .container > div {
     padding: .5rem 1.5rem;
 }
-h3.section-tag{
+.section-title span.subtitle {
     color: #ff3333;
-    font-weight: 800;
+    letter-spacing: 2px;
+    display: block;
+    line-height: 14px;
+    font-weight: 600;
 }
-h2.section-title, .description p{
+h2.title {
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-top: 15px;
+    margin-bottom: 0;
+}
+.description p{
     /* text-align: center; */
     width: 100%;
+    line-height: 28px;
 }
 .full-btn{
     width: 100%;
@@ -328,19 +381,34 @@ section:not(:first-child){
 .full-btn{
     width: 100%;
 }
-.btn, a.btn{
+.btn, .btn-outline{
     background-color: black;
     font-weight: 600;
-    padding: 1rem 1.2rem;
-    font-size: .81rem;
+    padding: 1rem 1.3rem;
+    font-size: .87rem;
     color: white;
     text-align: center;
-    text-transform: capitalize !important;
     cursor: pointer;
     font-family: "Poppins", sans-serif;
     text-decoration: none;
-    border-radius: 999px;
+    border-radius: 9px;
     border: none;
+    flex-direction: row;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.portfolio-content{
+    padding-top: 1.3rem;
+}
+span.material-icons{
+    margin-right: 10px;
+}
+.btn-outline{
+    background-color: white;
+    border: 2px solid black;
+    color: #000;
+    margin-left: 10px
 }
 a.link{
     padding: 1.3rem 2.5rem;
@@ -360,10 +428,16 @@ section#about h1, section#skills h1, section#portfolio h1, section#contact h1{
 }
 .skills-container,.projects-container, .roles-content{
     display: flex;
-    flex: 0 1 auto;
     flex-wrap: wrap;
     padding: .8rem 1.5rem;
     align-items: center;
+}
+.skill-container > div {
+    flex: 1 1 0%;
+}
+.skills p {
+    padding-top: 20px;
+    line-height: 23px;
 }
 form .error {
     color: #ff0000;
@@ -430,15 +504,11 @@ a.nav-link.active{
 }
 .role{
     width: 100%;
-    display: flex;
-    flex-direction: row;
     margin: 1rem 0;
-    padding: 0.6rem 1.2rem;
-    border: 1px solid rgb(211, 211, 211);
-    border-radius: 20px;
+    padding: .5rem .2rem;
 }
 .role h3{
-    font-weight: 800;
+    font-weight: 700;
 }
 .role h4, .role h5{
     padding: .3rem 0;
