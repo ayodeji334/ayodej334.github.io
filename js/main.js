@@ -1,8 +1,14 @@
 $(document).ready(function(){
     //set bg color and scroll height on page load 
-    let bgColor = window.getComputedStyle(document.body, null).getPropertyValue('background-color');
     let scrollHeight = Math.floor($(window).scrollTop());
-    let currentlocationHash = window.location.hash;
+    // let currentlocationHash = window.location.hash
+    let currentTheme = localStorage.getItem('current-theme');
+
+    if(currentTheme === 'dark'){
+        $('body').addClass("dark-mode");
+    }else{
+        $('body').removeClass("dark-mode");
+    }
 
     //Scrolling event
     $(window).scroll(function(){
@@ -12,11 +18,12 @@ $(document).ready(function(){
 
     //Toggle Theme Btn
     $("#toggleThemeBtn").click(function(){ 
-        bgColor = window.getComputedStyle(document.body, null).getPropertyValue('background-color');
-        $('body').toggleClass('dark-mode');
+        currentTheme = localStorage.getItem('current-theme');
            
-        if(bgColor === "rgb(255, 255, 255)" || bgColor === "rgba(0, 0, 0, 0)"){
-            // $('body').addClass("dark-mode");
+        if(currentTheme === 'light'){
+            localStorage.setItem('current-theme', 'dark');
+
+            $('body').addClass("dark-mode");
             
             $('.btn').css({
                 "backgroundColor": "rgb(255, 255, 255)",
@@ -47,7 +54,9 @@ $(document).ready(function(){
             }; 
 
         }else{
-            // $('body').removeClass("dark-mode")
+            localStorage.setItem('current-theme', 'light');
+            
+            $('body').removeClass("dark-mode")
 
             $('.btn').css({
                 "backgroundColor": "rgb(0, 0, 0)",
