@@ -206,9 +206,6 @@ ul li{
     transform: translateY(-4px) rotateZ(-130deg);
 }
 .tools-container {
-    background-color: white;
-    /* padding-left: 3rem;
-    padding-right: 3rem; */
     margin-top: -10px
 }
 .tools-container img {
@@ -298,7 +295,7 @@ footer{
     width: 270px;
     padding: 1.7rem;
     object-fit: contain;
-    background-image: url('../assets/img/odun-pic-removebg-preview.png');
+    background-image: url('../assets/img/odunayo-ayodeji-fawumi.png');
     background-position: center;
     background-size: 75% 100%;
     background-repeat: no-repeat;

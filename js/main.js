@@ -11,10 +11,12 @@ $(document).ready(function(){
     });
 
     //Toggle Theme Btn
-    $("#toggleThemeBtn").click(function(){    
+    $("#toggleThemeBtn").click(function(){ 
         bgColor = window.getComputedStyle(document.body, null).getPropertyValue('background-color');
+        $('body').toggleClass('dark-mode');
+           
         if(bgColor === "rgb(255, 255, 255)" || bgColor === "rgba(0, 0, 0, 0)"){
-            $('body').addClass("dark-mode");
+            // $('body').addClass("dark-mode");
             
             $('.btn').css({
                 "backgroundColor": "rgb(255, 255, 255)",
@@ -39,21 +41,13 @@ $(document).ready(function(){
             $('.bar').css({
                 "backgroundColor": "rgb(255, 255, 255)"
             });
-
-            $('.contact-detail svg').css({
-                "fill": "rgb(255, 255, 255)"
-            });
              
             if(Math.floor($(window).scrollTop()) > 60){
                 $('.navbar-container').removeClass("lightBg").addClass("darkBg");
             }; 
 
         }else{
-            $('body').removeClass("dark-mode")
-
-            $('.contact-detail svg').css({
-                "fill": "rgb(0, 0, 0)"
-            });
+            // $('body').removeClass("dark-mode")
 
             $('.btn').css({
                 "backgroundColor": "rgb(0, 0, 0)",
