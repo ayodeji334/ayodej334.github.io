@@ -1,7 +1,7 @@
 html, body{
     font-family: 'Poppins','Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     overflow-x: hidden;
-    /*scroll-behavior: smooth;*/
+    scroll-behavior: smooth;
     font-size: 15px;
     margin: 0;
     padding: 0;
@@ -97,18 +97,19 @@ h1,h2,h3,h4,h5{
     background-color: rgb(7, 7, 7);
     color: #ffffff;
 } */
-span.title, span.subtitle {
+span.title, h2.title, span.subtitle {
     font-size: 1rem;
     letter-spacing: 3px;
-    text-transform: uppercase;
     font-weight: 500;
     display: block;
     margin-bottom: 20px;
+    text-align: center;
 }
 .social-share {
     display: flex;
     margin: -10px -12px;
     flex-wrap: wrap;
+    justify-content: center;
 }
 .social-share li {
     margin: 10px 12px;
@@ -144,6 +145,7 @@ span.title, span.subtitle {
     font-weight: 600;
     font-size: 3.2rem;
     margin-bottom: 1rem;
+    text-align: center;
 }
 .description h2 span.outline{
     color: #ff3333;
@@ -163,10 +165,9 @@ span.title, span.subtitle {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 2rem 0;
+    margin: .7rem 0;
 }
 .banner-content{
-    padding: 3.6rem 1.4rem !important;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -185,7 +186,6 @@ span.title, span.subtitle {
     width: 100%;
     padding: 2rem 0;
 }
-
 ul{
     list-style: none;
     padding: 0;
@@ -197,7 +197,7 @@ ul li{
     display: flex;
     flex-direction: column;
     /* flex-wrap: wrap; */
-    flex: 0 1 auto;
+    flex: 1 1 0%;
 }
 .bar1_transform{
     transform: translateY(8px) rotateZ(130deg);
@@ -205,9 +205,20 @@ ul li{
 .bar3_transform{
     transform: translateY(-4px) rotateZ(-130deg);
 }
-.skill img {
-    max-width: 40px;
-    height: auto;
+.tools-container {
+    background-color: white;
+    /* padding-left: 3rem;
+    padding-right: 3rem; */
+    margin-top: -10px
+}
+.tools-container img {
+    max-width: 400px;
+    width: 100%;
+    height: 400px;
+    background-color: #e7e7e7;
+    border-radius: 999px;
+    padding: 1.5rem;
+    object-fit: cover; 
 }
 .contact-detail svg{
     width: 20px;
@@ -275,17 +286,26 @@ button:focus{
 footer{
     border-top: 1px solid #d3d3d3;
 }
-
-.illustration{
+.skills-img-container{
+    margin: auto;
+    max-width: 450px;
+    height: 450px;
+    margin-top: 20px;
+    position: relative;
+}
+.illustration {
+    height: 270px;
+    width: 270px;
+    padding: 1.7rem;
+    object-fit: contain;
+    background-image: url('../assets/img/odun-pic-removebg-preview.png');
     background-position: center;
-    background-size: 80% 90%;
+    background-size: 75% 100%;
     background-repeat: no-repeat;
-    height: 170px;
-    max-width: 170px;
-    width: 100%;
-    margin: 2.4rem;
+    background-color: rgb(247 247 247);
+    margin-left: auto;
+    margin-right: auto;
     border-radius: 9999px;
-    background-color: rgb(223, 247, 248);
 }
 section h3{
     font-weight: 600;
@@ -313,10 +333,7 @@ section.portfolio-section-title{
     width: 100%;
     /* padding: 0 1.3rem; */
 }
-.container > div {
-    padding: .5rem 1.7rem;
-}
-section > div.container:not(:first-child) {
+section > div:not(:first-child) {
     padding: 3.3rem 0;
 }
 section.portfolio-section-title{
@@ -325,7 +342,7 @@ section.portfolio-section-title{
 .container > div {
     padding: .5rem 1.5rem;
 }
-.section-title span.subtitle {
+.section-title span.subtitle, span.title{
     color: #ff3333;
     letter-spacing: 2px;
     display: block;
@@ -398,9 +415,9 @@ section:not(:first-child){
     justify-content: center;
     align-items: center;
 }
-.portfolio-content{
+/* .portfolio-content{
     padding-top: 1.3rem;
-}
+} */
 span.material-icons{
     margin-right: 10px;
 }
@@ -429,11 +446,15 @@ section#about h1, section#skills h1, section#portfolio h1, section#contact h1{
 .skills-container,.projects-container, .roles-content{
     display: flex;
     flex-wrap: wrap;
+    flex: 1 1 0%;
     padding: .8rem 1.5rem;
     align-items: center;
 }
+
 .skill-container > div {
     flex: 1 1 0%;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
 }
 .skills p {
     padding-top: 20px;
@@ -533,27 +554,25 @@ a.nav-link.active{
     margin-top: 2rem;
     margin-bottom: 3rem;
 }
-.contact-detail li a{
-    margin: .5rem 0;
-    padding: .8rem;
+.contact-detail li a {
+    /* flex-direction: column;
     display: flex;
     width: fit-content;
-    justify-content: flex-start;
+    justify-content: flex-start; */
     align-items: center;
-    text-decoration: none;
-    border-radius: 15px;
 }
-.contact-detail span {
+/* .contact-detail span {
     font-size: .98rem;
     font-weight: 700;
     color: black;
     margin-left: .8rem;
-}
+} */
 .m-3{
    margin: 2.4rem;
 }
 p{
     font-size: 1rem;
+    line-height: 30px;
 }
 .group-btn{
     display: flex;
@@ -564,11 +583,11 @@ p{
     align-items: center;
 }
 .contact-detail,.contact-form{
-    width: 100%;
+    flex: 1 1 0%;
 }
-.contact-form{
+/* .contact-form{
     padding-top: 1.8rem;
-}
+} */
 button, button:focus{
     border: none;
 }
@@ -598,7 +617,7 @@ button, button:focus{
     width: 100%;
     max-width: 700px;
     border-radius: 2px;
-    max-height: 500px;
+    max-height: 400px;
     object-fit: contain;
 }
 .form-group{

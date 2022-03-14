@@ -8,8 +8,17 @@
         padding: 0;
         width: 100%;
     }
+    .description h2{
+        text-align: left;
+    }
     h2.section-title, .description p, h3.section-tag{
         text-align: left;
+    }
+    span.title, h2.title, span.subtitle {
+        text-align: left;
+    }
+    .social-share {
+        justify-content: start;
     }
     .modal-body {
         background-color: #ffffff;
@@ -39,6 +48,9 @@
         padding: 0 20px;
         width: 100%;
     }
+    .skills-img-container{
+        margin-top: -20px;
+    }
     .banner-content{
         flex-direction: row;
         justify-content: left;
@@ -48,16 +60,26 @@
         padding: 0 7rem;
         flex-direction: row;
     }
+    .tools-container{
+        padding-left: 70px;
+    }
+    .illustration-container {
+        height: 630px;
+        width: 100%;
+        margin-top: -20px;
+        padding-left: 3rem;
+    }
     .illustration{
         visibility: visible;
-        background-image: url("../assets/img/logo.svg");
+        background-image: url("../assets/img/odun-pic-removebg-preview.png");
         background-position: center;
-        background-size: 80% 90%;
+        background-size: 106% 95%;
         background-repeat: no-repeat;
-        height: 400px;
+        height: 100%;
         width: 100%;
         max-width: 400px;
         margin: 2.4rem;
+        border-radius: 9px;
     }
     .about-container,.project,.skill-container,.contact-container{
         flex-direction: row;
