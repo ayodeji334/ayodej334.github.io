@@ -143,10 +143,10 @@ span.title, h2.title, span.subtitle {
 }
 .description h2{
     font-weight: 600;
-    font-size: 2.5rem;
+    font-size: 2.8rem;
     margin-bottom: 1rem;
     text-align: center;
-    width: 79%;
+    width: 89%;
 }
 .description h2 span.outline{
     color: #ff3333;
