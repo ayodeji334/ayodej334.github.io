@@ -10,6 +10,8 @@
     }
     .description h2{
         text-align: left;
+        font-size: 3.2rem;
+        width: 90%;
     }
     h2.section-title, .description p, h3.section-tag{
         text-align: left;
@@ -96,6 +98,9 @@
     .project-img{
         padding: 1.36rem 6.5rem;
         margin: 1.7rem 0;
+    }
+    .contact-form{
+        padding-top: 0;
     }
 }
 

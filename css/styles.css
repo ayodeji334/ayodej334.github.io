@@ -143,9 +143,10 @@ span.title, h2.title, span.subtitle {
 }
 .description h2{
     font-weight: 600;
-    font-size: 3.2rem;
+    font-size: 2.5rem;
     margin-bottom: 1rem;
     text-align: center;
+    width: 80%;
 }
 .description h2 span.outline{
     color: #ff3333;
@@ -582,9 +583,9 @@ p{
 .contact-detail,.contact-form{
     flex: 1 1 0%;
 }
-/* .contact-form{
+.contact-form{
     padding-top: 1.8rem;
-} */
+}
 button, button:focus{
     border: none;
 }
